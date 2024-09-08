@@ -1,7 +1,6 @@
 ﻿using BibliotecaApi.Dto.Autor;
 using BibliotecaApi.Models;
 using BibliotecaApi.Services.Autor;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BibliotecaApi.Controllers;

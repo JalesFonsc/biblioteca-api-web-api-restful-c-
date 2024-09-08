@@ -36,7 +36,6 @@ public class AutorService : IAutorInterface
         }
         catch (Exception ex)
         {
-
             resposta.Mensagem = ex.Message;
             resposta.Status = false;
             return resposta;
@@ -49,15 +48,17 @@ public class AutorService : IAutorInterface
 
         try 
         {
-            var livro = await _context.Livros.Include(p => p.Autor).FirstOrDefaultAsync(i => i.Id == idLivro);
+            var livro = await _context.Livros.Include(p => p.Autor).AsNoTracking().FirstOrDefaultAsync(i => i.Id == idLivro);
 
             if (livro == null)
             {
-                resposta.Mensagem = "Nenhum autor foi encontrado para esse livro!";
+                resposta.Mensagem = $"Nenhum livro de id = {idLivro} foi encontrado!";
                 return resposta;
             }
 
-            resposta.Dados = livro.Autor;
+            var autor = await _context.Autores.Include(p => p.Livros).AsNoTracking().FirstOrDefaultAsync(autorBanco => autorBanco.Id == livro.Autor.Id);
+
+            resposta.Dados = autor;
             resposta.Mensagem = $"O autor do livro de id = {idLivro} retornado com sucesso!";
 
             return resposta;
@@ -122,7 +123,7 @@ public class AutorService : IAutorInterface
         ResponseModel<List<AutorModel>> resposta = new ResponseModel<List<AutorModel>>();
         try
         {
-            var autor = await _context.Autores.FirstOrDefaultAsync(i => i.Id == idAutor);
+            var autor = await _context.Autores.AsNoTracking().FirstOrDefaultAsync(i => i.Id == idAutor);
 
             if(autor == null)
             {
@@ -137,10 +138,10 @@ public class AutorService : IAutorInterface
                 Sobrenome = autorCriacaoDto.Sobrenome
             };
 
-            _context.Update(autorModificado);
+            _context.Entry(autorModificado).State = EntityState.Modified;
             await _context.SaveChangesAsync();
 
-            var autores = await _context.Autores.ToListAsync();
+            var autores = await _context.Autores.AsNoTracking().ToListAsync();
 
             resposta.Dados = autores;
             resposta.Mensagem = "Autor editado com sucesso!";

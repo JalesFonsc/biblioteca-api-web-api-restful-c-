@@ -1,7 +1,7 @@
 using BibliotecaApi.Data;
 using BibliotecaApi.Services.Autor;
+using BibliotecaApi.Services.Livro;
 using Microsoft.EntityFrameworkCore;
-using MySqlConnector;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IAutorInterface, AutorService>();
+builder.Services.AddScoped<ILivroInterface, LivroService>();
 
 string mySqlConnection = builder.Configuration.GetConnectionString("DefaultConnection");
 

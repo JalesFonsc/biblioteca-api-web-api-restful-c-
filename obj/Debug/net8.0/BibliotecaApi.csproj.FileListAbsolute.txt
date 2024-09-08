@@ -102,3 +102,4 @@ C:\Users\Jales\Desktop\Projetos C#\BibliotecaApi\BibliotecaApi\obj\Debug\net8.0\
 C:\Users\Jales\Desktop\Projetos C#\BibliotecaApi\BibliotecaApi\obj\Debug\net8.0\BibliotecaApi.pdb
 C:\Users\Jales\Desktop\Projetos C#\BibliotecaApi\BibliotecaApi\obj\Debug\net8.0\BibliotecaApi.genruntimeconfig.cache
 C:\Users\Jales\Desktop\Projetos C#\BibliotecaApi\BibliotecaApi\obj\Debug\net8.0\ref\BibliotecaApi.dll
+C:\Users\Jales\Desktop\Projetos C#\BibliotecaApi\BibliotecaApi\obj\Debug\net8.0\BibliotecaApi.sourcelink.json

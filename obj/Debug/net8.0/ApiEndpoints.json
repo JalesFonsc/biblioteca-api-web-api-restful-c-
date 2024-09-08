@@ -153,5 +153,160 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "BibliotecaApi.Controllers.LivroController",
+    "Method": "BuscarLivroPorId",
+    "RelativePath": "api/Livro/BuscarLivroPorId/{idLivro}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idLivro",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BibliotecaApi.Models.ResponseModel\u00601[[BibliotecaApi.Models.LivroModel, BibliotecaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BibliotecaApi.Controllers.LivroController",
+    "Method": "BuscarLivrosPorIdAutor",
+    "RelativePath": "api/Livro/BuscarLivrosPorIdAutor/{idAutor}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idAutor",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BibliotecaApi.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[BibliotecaApi.Models.LivroModel, BibliotecaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BibliotecaApi.Controllers.LivroController",
+    "Method": "CriarLivro",
+    "RelativePath": "api/Livro/CriarLivro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "livroCriacaoDto",
+        "Type": "BibliotecaApi.Dto.Livro.LivroCriacaoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BibliotecaApi.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[BibliotecaApi.Models.LivroModel, BibliotecaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BibliotecaApi.Controllers.LivroController",
+    "Method": "EditarLivro",
+    "RelativePath": "api/Livro/EditarLivro/{idLivro}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idLivro",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "livroCriacaoDto",
+        "Type": "BibliotecaApi.Dto.Livro.LivroCriacaoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BibliotecaApi.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[BibliotecaApi.Models.LivroModel, BibliotecaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BibliotecaApi.Controllers.LivroController",
+    "Method": "ListarLivros",
+    "RelativePath": "api/Livro/ListarLivros",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "BibliotecaApi.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[BibliotecaApi.Models.LivroModel, BibliotecaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BibliotecaApi.Controllers.LivroController",
+    "Method": "RemoverLivro",
+    "RelativePath": "api/Livro/RemoverLivro/{idLivro}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idLivro",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BibliotecaApi.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[BibliotecaApi.Models.LivroModel, BibliotecaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]
